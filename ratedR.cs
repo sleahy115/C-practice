@@ -25,6 +25,10 @@ class ratedR
 				Console.WriteLine("Sorry you need your parent's permission first.");
 			}
 		}
+		else
+		{
+			Console.WriteLine("Sorry you are too young for the movie.");
+		}
 
 	}
 	
