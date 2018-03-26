@@ -12,9 +12,18 @@ class ratedR
 		{
 			Console.WriteLine("Great you can see the movie");
 		}
-		else
+		if(age >13)
 		{
-			Console.WriteLine("Sorry you are too young to see the movie.");
+			Console.WriteLine("Do you have permission from your parents? yes or no");
+			string permission = Console.ReadLine();
+			if (permission == "yes")
+			{
+				Console.WriteLine("OK enjoy the movie");
+			}
+			else
+			{
+				Console.WriteLine("Sorry you need your parent's permission first.");
+			}
 		}
 
 	}
