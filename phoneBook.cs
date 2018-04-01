@@ -26,8 +26,17 @@ class PhoneBook
 			{
 				LookUpContact();
 			}
-			else
+			else 
 			{
+				Console.WriteLine("Would you like to remove a contact from the phone book?y/n");
+				string remove = Console.ReadLine();
+				remove = remove.ToLower();
+				if(remove == "y")
+				{
+					RemoveContact();
+				}
+				else
+				{
 				Console.WriteLine("Are you finished with the phone book?y/n");
 				string closeResponse = Console.ReadLine();
 				closeResponse = closeResponse.ToLower();
@@ -38,6 +47,8 @@ class PhoneBook
 				else
 				{
 					Main();
+				}
+
 				}
 			}
 
@@ -64,7 +75,15 @@ class PhoneBook
 
 	static void RemoveContact()
 	{
-
+		Console.WriteLine("Remove Contact");
+		Console.WriteLine("Enter the name of the contact you would like to remove");
+		string removedContact = Console.ReadLine();
+		 if(phoneNumbers.ContainsKey(removedContact))
+		 {
+		 	phoneNumbers.Remove(removedContact);
+		 	Console.WriteLine(removedContact + "has been removed from the phone book");
+		 }
+		 Main();
 	}
 
 	static void LookUpContact()
