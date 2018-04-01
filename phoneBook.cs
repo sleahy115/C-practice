@@ -4,13 +4,13 @@ using System.Collections.Generic;
 class PhoneBook
 
 {
-	public static Dictionary<string,sting> phoneNumbers = new Dictionary<string, string>();
+	public static Dictionary<string,string> phoneNumbers = new Dictionary<string, string>();
 	
 	static void Main()
 	{
 		Console.WriteLine("Would you like to add a contact to the phone book?y/n");
 		string response = Console.ReadLine();
-	    response = response.toLower();
+	    response = response.ToLower();
 
 		if(response == "y")
 		{
@@ -20,7 +20,7 @@ class PhoneBook
 		{
 			Console.WriteLine("Would you like to look up someone in the phone book? y/n");
 			string lookUpResponse = Console.ReadLine();
-			lookUpResponse = lookupResponse.toLower();
+			lookUpResponse = lookUpResponse.ToLower();
 
 			if(lookUpResponse == "y")
 			{
@@ -30,11 +30,11 @@ class PhoneBook
 			else
 			{
 				Console.WriteLine("Are you finished with the phone book?y/n");
-				string closeResponse = Console.Readline();
-				closeResponse = closeResponse.toLower();
+				string closeResponse = Console.ReadLine();
+				closeResponse = closeResponse.ToLower();
 				if(closeResponse == "y")
 				{
-					Console.WriteLine("Thanks for using the phone book.")
+					Console.WriteLine("Thanks for using the phone book.");
 				}
 				else
 				{
@@ -49,9 +49,9 @@ class PhoneBook
 	{
 		Console.WriteLine("New Contact");
 		Console.WriteLine("Please enter the contact's name");
-		string name = Console.Readline();
+		string name = Console.ReadLine();
 		Console.WriteLine("Please enter the contact's phone number");
-		string phoneNumber = Console.Readline();
+		string phoneNumber = Console.ReadLine();
 		if (phoneNumbers.ContainsKey(name))
 		{
 			Console.WriteLine("This person is already in the phone book. Thier number is " +phoneNumbers[name]);
@@ -71,10 +71,10 @@ class PhoneBook
 	{
 		Console.WriteLine("Look up contact");
 		Console.WriteLine("Please enter the name of the contact");
-		string friend = Console.Readline();
+		string friend = Console.ReadLine();
 		if(phoneNumbers.ContainsKey(friend))
 		{
-			Console.WriteLine(friend + "'s number is " phoneNumbers[friend]);
+			Console.WriteLine(friend + "'s number is " + phoneNumbers[friend]);
 		}
 	}
 }
