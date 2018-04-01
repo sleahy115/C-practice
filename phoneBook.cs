@@ -69,6 +69,12 @@ class PhoneBook
 
 	static void LookUpContact()
 	{
-
+		Console.WriteLine("Look up contact");
+		Console.WriteLine("Please enter the name of the contact");
+		string friend = Console.Readline();
+		if(phoneNumbers.ContainsKey(friend))
+		{
+			Console.WriteLine(friend + "'s number is " phoneNumbers[friend]);
+		}
 	}
 }
