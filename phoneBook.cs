@@ -24,7 +24,6 @@ class PhoneBook
 
 			if(lookUpResponse == "y")
 			{
-				// Console.WriteLine("Please enter the name of the person you would like to look up");
 				LookUpContact();
 			}
 			else
@@ -60,6 +59,7 @@ class PhoneBook
 		{
 			phoneNumbers.Add(name, phoneNumber);
 		}
+		Main();
 	}
 
 	static void RemoveContact()
@@ -72,9 +72,26 @@ class PhoneBook
 		Console.WriteLine("Look up contact");
 		Console.WriteLine("Please enter the name of the contact");
 		string friend = Console.ReadLine();
+
 		if(phoneNumbers.ContainsKey(friend))
 		{
-			Console.WriteLine(friend + "'s number is " + phoneNumbers[friend]);
+			string value = phoneNumbers[friend];
+			Console.WriteLine(friend + "'s number is " + value);
 		}
+		else 
+		{
+			Console.WriteLine("Sorry your friend is not in the phone book. Would you like to add them? y/n");
+			string addFriend = Console.ReadLine();
+			addFriend = addFriend.ToLower();
+			if(addFriend == "y")
+			{
+				AddContact();
+			}
+			else
+			{
+				Main();
+			}
+		}
+		Main();
 	}
 }
