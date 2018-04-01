@@ -47,7 +47,19 @@ class PhoneBook
 
 	static void AddContact()
 	{
-
+		Console.WriteLine("New Contact");
+		Console.WriteLine("Please enter the contact's name");
+		string name = Console.Readline();
+		Console.WriteLine("Please enter the contact's phone number");
+		string phoneNumber = Console.Readline();
+		if (phoneNumbers.ContainsKey(name))
+		{
+			Console.WriteLine("This person is already in the phone book. Thier number is " +phoneNumbers[name]);
+		}
+		else
+		{
+			phoneNumbers.Add(name, phoneNumber);
+		}
 	}
 
 	static void RemoveContact()
