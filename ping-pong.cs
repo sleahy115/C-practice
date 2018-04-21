@@ -2,24 +2,25 @@ using System;
 
 class PingPong
 {
-	static void main ()
+	static void Main()
 	{
-		Console.WriteLine = "Please enter a number and we will play ping pong";
-		int number =  Console.ReadLine();
+		Console.WriteLine("Please enter a number and we will play ping pong");
+		string numberString =  Console.ReadLine();
+		int number = int.Parse(numberString);
 
-		for(int index = 0; index < number.length; index ++)
+		for(int index = 1; index < number; index ++)
 		{
-			if (number % 3 = 0)
+			if (index % 3 == 0)
 			{
 				Console.WriteLine("ping");
 			}
-			else if (number % 5 = 0)
+			else if (index % 5 == 0)
 			{
 				Console.WriteLine("pong");
 			}
 			else
 			{
-				Console.WriteLine(number);
+				Console.WriteLine(index);
 			}
 			
 		}
