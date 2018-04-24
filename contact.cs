@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-public Class Contact 
+public class Contact 
 {
 	public string Name;
-	public sting Phone;
+	public string Phone;
 	public string Email;
 }
 
@@ -25,6 +25,14 @@ class Program
 		Contact Melissa = new Contact();
 		Melissa.Name = "Melissa Brooks";
 		Melissa.Phone = "223-445-6678";
-		Melissa.Email ="Melissa@melissa.com"
+		Melissa.Email ="Melissa@melissa.com";
+
+		List<Contact> AddressBook = new List<Contact>() { Bob, Jane, Melissa };
+		foreach(Contact person in AddressBook)
+		{
+			Console.WriteLine("Name : " + person.Name);
+			Console.WriteLine("Phone number: " + person.Phone);
+			Console.WriteLine("Email: " + person.Email);
+		}
 	}
 }
