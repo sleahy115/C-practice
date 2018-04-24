@@ -31,10 +31,26 @@ public class Program
 		Porsche.Year = 2017;
 		Porsche.Mileage = 3000;
 
-		List<Car> Car = new List<Car>() { Ford, Mazda, Porsche };
+		// List<Car> Car = new List<Car>() { Ford, Mazda, Porsche };
+		// foreach(Car auto in Car)
+		// {
+		// 	Console.WriteLine(auto.Make);
+		// }
+		Console.WriteLine("Enter maximum mileage");
+		string maxMilesString = Console.ReadLine();
+		int maxMiles = int.Parse(maxMileString);
+
+		List<Car> CarsMatching = new List<Car>();
 		foreach(Car auto in Car)
 		{
+		if (auto.Mileage < maxMiles)
+		{
+			CarsMatching.Add(auto);
+		} 	
+		foreach(Car auto in CarsMatching)
+		{
 			Console.WriteLine(auto.Make);
+			Console.WriteLine(autoMileage);
 		}
 	}
 }
