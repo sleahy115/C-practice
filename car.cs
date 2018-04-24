@@ -41,11 +41,11 @@ public class Program
 		int maxMiles = int.Parse(maxMilesString);
 
 		List<Car> CarsMatching = new List<Car>();
-		foreach(Car automobile in CarsMatching)
+		foreach(Car auto in Car)
 		{
-			if (automobile.Mileage < maxMiles)
+			if (auto.Mileage < maxMiles)
 			{
-				CarsMatching.Add(automobile);
+				CarsMatching.Add(auto);
 			} 	
 		}	
 		foreach(Car vehicle in CarsMatching)
