@@ -48,6 +48,25 @@ class Program
 			Console.WriteLine(animal.Type);
 			Console.WriteLine(animal.Name);
 		}
+		Console.WriteLine("How old would you like your pet to be?");
+		string ageString = Console.ReadLine();
+		int age = int.Parse(ageString);
 
+		List<Animal> ageList = new List<Animal>();
+		foreach(Animal animal in animalList)
+		{
+			if(animal.Age < age )
+			{
+				ageList.Add(animal);
+			}
+			Console.WriteLine(animal.Name);
+		}
+		foreach(Animal animal in ageList)
+		{	
+			Console.WriteLine(animal.Name);
+			Console.WriteLine(animal.Type);
+			Console.WriteLine(animal.Age);
+		}
+		
 	}
 }	
