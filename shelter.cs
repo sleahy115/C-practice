@@ -12,40 +12,41 @@ public class Animal
 
 class Program
 {
-	public void static Main()
+	public static void  Main()
 	{
 		Animal Mutt = new Animal();
 		Mutt.Type = "Dog";
 		Mutt.Breed = "Mutt";
 		Mutt.Name = "Rusty";
 		Mutt.Age = 5;
-		Mutt.Nutered = Y;
+		Mutt.Nutered = true;
 
 		Animal Siamese = new Animal();
 		Siamese.Type = "Cat";
 		Siamese.Breed = "Siamese";
 		Siamese.Name = "King";
 		Siamese.Age = 2;
-		Siamese.Nutered = N;
+		Siamese.Nutered = false;
 
 		Animal Egyptian = new Animal();
 		Egyptian.Type = "Cat";
 		Egyptian.Breed = "Egyptian";
 		Egyptian.Name = "Queen";
 		Egyptian.Age = 1;
-		Egyptian.Nutered = N;
+		Egyptian.Nutered = true;
 
 		Animal Pug = new Animal();
 		Pug.Type = "Dog";
 		Pug.Breed = "Pug";
 		Pug.Name = "Snouty";
 		Pug.Age = 3;
-		Pug.Nutered = Y;
+		Pug.Nutered = false;
 
-		List<Animal> = animalList = new List<Animal>(); { Mutt, Siamese, Egyptian, Pug };
+		List<Animal> animalList = new List<Animal>() { Mutt, Siamese, Egyptian, Pug };
 		foreach(Animal animal in animalList)
 		{
-			Console.WriteLine(animal.type);
+			Console.WriteLine(animal.Type);
+			Console.WriteLine(animal.Name);
 		}
 
 	}
