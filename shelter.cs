@@ -67,6 +67,25 @@ class Program
 			Console.WriteLine(animal.Type);
 			Console.WriteLine(animal.Age);
 		}
+
+		Console.WriteLine("Would you like your pet to be nutered? true/false");
+		string nuteredQ = Console.ReadLine();
+		bool nuteredBool = bool.Parse(nuteredQ);
+
+		List<Animal> nuteredList = new List<Animal>();
+		foreach(Animal animal in animalList)
+		{
+			if(animal.Nutered == true)
+			{
+				nuteredList.Add(animal);
+			}
+		} 
+		foreach(Animal animal in nuteredList)
+		{
+			Console.WriteLine(animal.Type);
+			Console.WriteLine(animal.Name);
+			Console.WriteLine(animal.Nutered);
+		}
 		
 	}
 }	
