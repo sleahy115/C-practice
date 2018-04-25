@@ -16,6 +16,10 @@ class Rectangle
 			return false;
 		}	
 	}
+	public int GetArea()
+	{
+		return Length * Width;
+	}
 }
 
 public class Program
@@ -42,6 +46,9 @@ public class Program
 		{
 			Console.WriteLine("Guess you are too hip to be square");
 		}
+
+		int area = myRectangle.GetArea();
+		Console.WriteLine("The area is " + area);
 	}
 }
 
