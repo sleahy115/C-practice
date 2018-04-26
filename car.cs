@@ -8,6 +8,11 @@ public class Car
 	public int Year;
 	public int Mileage;
 	public int Price;
+
+	public bool WorthBuying(int maxPrice, int maxMiles)
+	{
+		return(Price < maxPrice && Mileage < maxMiles);
+	}
 }
 
 public class Program
@@ -51,7 +56,7 @@ public class Program
 		List<Car> CarsMatching = new List<Car>();
 		foreach(Car auto in Car)
 		{
-			if (auto.Mileage < maxMiles && auto.Price < maxPrice)
+			if (auto.WorthBuying(maxPrice, maxMiles))
 			{
 				CarsMatching.Add(auto);
 			} 	
