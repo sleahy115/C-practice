@@ -8,6 +8,18 @@ public class Animal
 	public string Name;
 	public int Age;
 	public bool Nutered;
+
+	public bool IsCat(string Type)
+	{
+		if(Type == "Cat")
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 }
 
 class Program
@@ -72,20 +84,52 @@ class Program
 		string nuteredQ = Console.ReadLine();
 		bool nuteredBool = bool.Parse(nuteredQ);
 
-		List<Animal> nuteredList = new List<Animal>();
+		if(nuteredBool == true)
+		{
+			List<Animal> nuteredList = new List<Animal>();
+			foreach(Animal animal in animalList)
+			{
+				if(animal.Nutered == true)
+				{
+					nuteredList.Add(animal);
+				}
+			} 
+			foreach(Animal animal in nuteredList)
+			{
+				Console.WriteLine(animal.Type);
+				Console.WriteLine(animal.Name);
+				Console.WriteLine(animal.Nutered);
+			}
+		}
+		
+		Console.WriteLine("Would you like a cat?y/n");
+		string wantCat = Console.ReadLine();
+
+		List<Animal> catList = new List<Animal>();
 		foreach(Animal animal in animalList)
 		{
-			if(animal.Nutered == true)
+			if(animal.Type == "Cat")
 			{
-				nuteredList.Add(animal);
+				catList.Add(animal);
 			}
-		} 
-		foreach(Animal animal in nuteredList)
-		{
-			Console.WriteLine(animal.Type);
-			Console.WriteLine(animal.Name);
-			Console.WriteLine(animal.Nutered);
 		}
+
+		if(wantCat == "y")
+		{
+			foreach(Animal animal in catList)
+			{
+				if(animal.IsCat(animal.Type) == true)
+				{
+					Console.WriteLine(animal.Type);
+					Console.WriteLine(animal.Name);
+				}
+				else
+				{
+					Console.WriteLine("OK no cats for you!");
+				}
+			}	
+
+		}	
 		
 	}
 }	
