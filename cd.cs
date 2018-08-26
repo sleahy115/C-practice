@@ -8,30 +8,30 @@ class Cd
 	private int _year;
 	private double _price;
 	
-	public Cd(string albumTitle, string albumArtist, int albumYear, double albumPrice = 19.99)
-	{
-		_title = albumTitle;
-		_artist = albumArtist;
-		_year = albumYear;
-		_price = albumPrice;
-	}
+	// public Cd(string albumTitle, string albumArtist, int albumYear, double albumPrice = 19.99)
+	// {
+	// 	_title = albumTitle;
+	// 	_artist = albumArtist;
+	// 	_year = albumYear;
+	// 	_price = albumPrice;
+	// }
 
-	public void SetTitle(int newTitle)
+	public void SetTitle(String newTitle)
 	{
 		_title = newTitle;
 	}
 
-	public void GetTitle()
+	public string GetTitle()
 	{
 		return _title;
 	}
 
-	public void SetArtist(int newArtist)
+	public void SetArtist(String newArtist)
 	{
 		_artist = newArtist;
 	}
 
-	public void GetArtist()
+	public string GetArtist()
 	{
 		return _artist;
 	}
@@ -41,17 +41,17 @@ class Cd
 		_year = newYear;
 	}
 
-	public void GetYear()
+	public int GetYear()
 	{
 		return _year;
 	}
 
-	public void SetPrice(int newPrice)
+	public void SetPrice(double newPrice)
 	{
 		_price = newPrice;
 	}
 
-	public void GetPrice()
+	public double GetPrice()
 	{
 		return _price;
 	}
@@ -62,22 +62,29 @@ public class Program
 {
 	public static void Main()
 	{
-		Cd firstCd = new Cd("Music for the ages", "Someone really good", 1984);
-		Cd secondCd = new Cd("Pop stars", "Someone really bad", 2002);
-		Cd thirdCd = new Cd("Heavy Metal", "Metal head", 2014, 12.95);
-		Cd forthCd = new Cd("Classical", "Someone dead now", 1946);
-		Cd fifthCd = new Cd("this should fail", "hope it does", 2002);
+		// Cd firstCd = new Cd("Music for the ages", "Someone really good", 1984);
+		// Cd secondCd = new Cd("Pop stars", "Someone really bad", 2002);
+		// Cd thirdCd = new Cd("Heavy Metal", "Metal head", 2014, 12.95);
+		// Cd forthCd = new Cd("Classical", "Someone dead now", 1946);
+		// Cd fifthCd = new Cd("this should fail", "hope it does", 2002);
 
-		List<Cd> Cds = new List<Cd>() {firstCd, secondCd, thirdCd};
-		Cds.Add(forthCd);
+		// List<Cd> Cds = new List<Cd>() {firstCd, secondCd, thirdCd};
+		// Cds.Add(forthCd);
 
-		foreach(Cd album in Cds) 
-		{
-			Console.WriteLine (album._title);
-			Console.WriteLine ("By: " + album.Artist);
-			Console.WriteLine ("Year: " + album.Year);
-			Console.WriteLine ("Price: " + album.Price);
-		}
+		// foreach(Cd album in Cds) 
+		// {
+
+			Cd sixthCd = new Cd();
+			sixthCd.SetTitle("Boy bands of the 90s"); 
+			sixthCd.SetArtist("Multiple");
+			sixthCd.SetYear(1999);
+			sixthCd.SetPrice(-22.50);
+
+			Console.WriteLine (sixthCd.GetTitle());
+			Console.WriteLine ("By: " + sixthCd.GetArtist());
+			Console.WriteLine ("Year: " + sixthCd.GetYear());
+			Console.WriteLine ("Price: " + sixthCd.GetPrice());
+		// }
 
 	}
 
