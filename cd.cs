@@ -8,7 +8,7 @@ class Cd
 	public int Year;
 	public double Price;
 	
-	public Cd(string albumTitle, string albumArtist, int albumYear, double albumPrice)
+	public Cd(string albumTitle, string albumArtist, int albumYear, double albumPrice = 19.99)
 	{
 		Title = albumTitle;
 		Artist = albumArtist;
@@ -22,11 +22,13 @@ public class Program
 {
 	public static void Main()
 	{
-		Cd firstCd = new Cd("Music for the ages", "Someone really good", 1984, 19.99);
-		Cd secondCd = new Cd("Pop stars", "Someone really bad", 2002, 11.99);
+		Cd firstCd = new Cd("Music for the ages", "Someone really good", 1984);
+		Cd secondCd = new Cd("Pop stars", "Someone really bad", 2002);
 		Cd thirdCd = new Cd("Heavy Metal", "Metal head", 2014, 12.95);
+		Cd forthCd = new Cd("Classical", "Someone dead now", 1946);
 
 		List<Cd> Cds = new List<Cd>() {firstCd, secondCd, thirdCd};
+		Cds.Add(forthCd);
 
 		foreach(Cd album in Cds) 
 		{
