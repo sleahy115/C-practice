@@ -48,7 +48,14 @@ class Cd
 
 	public void SetPrice(double newPrice)
 	{
-		_price = newPrice;
+		if(newPrice >= 0)
+		{
+			_price = newPrice;
+		}
+		else
+		{
+			Console.WriteLine("Sorry the price must be greater than 0");
+		}
 	}
 
 	public double GetPrice()
@@ -80,10 +87,17 @@ public class Program
 			sixthCd.SetYear(1999);
 			sixthCd.SetPrice(-22.50);
 
-			Console.WriteLine (sixthCd.GetTitle());
-			Console.WriteLine ("By: " + sixthCd.GetArtist());
-			Console.WriteLine ("Year: " + sixthCd.GetYear());
-			Console.WriteLine ("Price: " + sixthCd.GetPrice());
+			Cd seventhCd = new Cd();
+			seventhCd.SetTitle("Boy bands of the 90s"); 
+			seventhCd.SetArtist("Multiple");
+			seventhCd.SetYear(1999);
+			seventhCd.SetPrice(-22.50);
+
+
+			Console.WriteLine (seventhCd.GetTitle());
+			Console.WriteLine ("By: " + seventhCd.GetArtist());
+			Console.WriteLine ("Year: " + seventhCd.GetYear());
+			Console.WriteLine ("Price: " + seventhCd.GetPrice());
 		// }
 
 	}
