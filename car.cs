@@ -3,11 +3,62 @@ using System.Collections.Generic;
 
 public class Car
 {
-	public string Make;
-	public string Model;
-	public int Year;
-	public int Mileage;
-	public int Price;
+	private string _make;
+	private string _model;
+	private int _year;
+	private int _mileage;
+	private int _price;
+
+	public void SetMake(string newmake)
+	{
+		_make = newMake;
+	}
+
+	public string GetMake()
+	{
+		return _make;
+	}
+
+	public void SetModel(string newModel)
+	{
+		_model = newModel;
+	}
+
+	public string SetMake(string newMake)
+	{
+		return _make;
+	}
+
+	public void SetYear(int newYear)
+	{
+		_year = newYear;
+	}
+
+	public int GetYear()
+	{
+		return _year;
+	}
+
+	public void SetMileage(int newMilage)
+	{
+		_mileage = newMileage;
+	}
+
+	public int GetMileage()
+	{
+		return _mileage;
+	}
+
+	public void SetPrice(int newPrice)
+	{
+		_price = newPrice;
+	}
+
+	public int GetPrice()
+	{
+		return _price;
+	}	
+
 
 	public bool WorthBuying(int maxPrice, int maxMiles)
 	{
