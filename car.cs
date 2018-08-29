@@ -30,8 +30,15 @@ public class Car
 	}
 
 	public void SetYear(int newYear)
-	{
-		_year = newYear;
+	{	
+		if(newYear >= 1885)
+		{
+			_year = newYear;
+		}
+		else
+		{
+			Console.WriteLine("Sorry the year must be later than 1885!");
+		}
 	}
 
 	public int GetYear()
@@ -41,7 +48,14 @@ public class Car
 
 	public void SetMileage(int newMilage)
 	{
-		_mileage = newMileage;
+		if(newMilage >=0)
+		{
+			_mileage = newMileage;
+		}
+		else
+		{
+			Console.WriteLine("Sorry the value must be greater than 0");
+		}
 	}
 
 	public int GetMileage()
@@ -51,7 +65,14 @@ public class Car
 
 	public void SetPrice(int newPrice)
 	{
-		_price = newPrice;
+		if(newPice >=0)
+		{
+			_price = newPrice;
+		}
+		else
+		{
+			Console.WriteLine("Sorry the price must be greater than 0");
+		}
 	}
 
 	public int GetPrice()
