@@ -90,7 +90,7 @@ public class Car
 
 public class Program
 {
-	public static void Main()
+	static void Main()
 	{
 		Car Ford = new Car();
 		Ford.SetMake("Ford");
@@ -127,25 +127,45 @@ public class Program
 		int maxPrice = int.Parse(maxPriceString);
 
 		List<Car> CarsMatching = new List<Car>();
-		if(CarsMatching.Count == 0 )
+		foreach(Car auto in Car)
 		{
-			Console.WriteLine("Sorry no matching cars");
-		}
-		else 
-		{
-			foreach(Car auto in Car)
+			if (auto.WorthBuying(maxPrice, maxMiles))
 			{
-				if (auto.WorthBuying(maxPrice, maxMiles))
+				CarsMatching.Add(auto);
+			}
+
+			if(CarsMatching.Count == 0)
+			{
+				Console.WriteLine("Sorry no matching cars, would you like to search again? y/n");
+				string searchAgain = Console.ReadLine();
+				if(searchAgain == "y")
 				{
-					CarsMatching.Add(auto);
+					Main();
+				}
+				else 
+				{
+					Console.WriteLine("Thank you!");
+				}
+
+			}
+			else
+			{
+				foreach(Car vehicle in CarsMatching)
+				{
+					Console.WriteLine("The vehicle make is " + vehicle.GetMake());
+					Console.WriteLine("The vehicle mileage is " + vehicle.GetMileage());
+					Console.WriteLine("The vehicle price is " + vehicle.GetPrice());
+				}
+				Console.WriteLine("Would you like to search again? y/n");
+				string searchAgain = Console.ReadLine();
+				if(searchAgain == "y")
+				{
+					Main();
+				}
+				else 
+				{
+					Console.WriteLine("Thank you!");
 				}
 			}	
-			foreach(Car vehicle in CarsMatching)
-			{
-				Console.WriteLine("The vehicle make is " + vehicle.GetMake());
-				Console.WriteLine("The vehicle mileage is " + vehicle.GetMileage());
-				Console.WriteLine("The vehicle price is " + vehicle.GetPrice());
-			}
-		}
-	}
+	}	}
 }
