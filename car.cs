@@ -9,7 +9,7 @@ public class Car
 	private int _mileage;
 	private int _price;
 
-	public void SetMake(string newmake)
+	public void SetMake(string newMake)
 	{
 		_make = newMake;
 	}
@@ -24,9 +24,10 @@ public class Car
 		_model = newModel;
 	}
 
-	public string SetMake(string newMake)
+	
+	public string GetModel()
 	{
-		return _make;
+		return _model;
 	}
 
 	public void SetYear(int newYear)
@@ -46,9 +47,9 @@ public class Car
 		return _year;
 	}
 
-	public void SetMileage(int newMilage)
+	public void SetMileage(int newMileage)
 	{
-		if(newMilage >=0)
+		if(newMileage >=0)
 		{
 			_mileage = newMileage;
 		}
@@ -65,7 +66,7 @@ public class Car
 
 	public void SetPrice(int newPrice)
 	{
-		if(newPice >=0)
+		if(newPrice >=0)
 		{
 			_price = newPrice;
 		}
@@ -83,7 +84,7 @@ public class Car
 
 	public bool WorthBuying(int maxPrice, int maxMiles)
 	{
-		return(Price < maxPrice && Mileage < maxMiles);
+		return(GetPrice() < maxPrice && GetMileage() < maxMiles);
 	}
 }
 
@@ -92,30 +93,30 @@ public class Program
 	public static void Main()
 	{
 		Car Ford = new Car();
-		Ford.Make = "Ford";
-		Ford.Model = "Tarus";
-		Ford.Year = 2016;
-		Ford.Mileage = 10000;
-		Ford.Price = 10000;
+		Ford.SetMake("Ford");
+		Ford.SetModel("Tarus");
+		Ford.SetYear(2016);
+		Ford.SetMileage(10000);
+		Ford.SetPrice(10000);
 
 		Car Mazda = new Car();
-		Mazda.Make = "Mazda";
-		Mazda.Model = "3";
-		Mazda.Year = 2018;
-		Mazda.Mileage = 100;
-		Mazda.Price = 20000;
+		Mazda.SetMake("Mazda");
+		Mazda.SetModel("3");
+		Mazda.SetYear(2018);
+		Mazda.SetMileage(100);
+		Mazda.SetPrice(20000);
 
 		Car Porsche = new Car();
-		Porsche.Make = "Porsche";
-		Porsche.Model = "Cayenne";
-		Porsche.Year = 2017;
-		Porsche.Mileage = 3000;
-		Porsche.Price = 35000;
+		Porsche.SetMake("Porsche");
+		Porsche.SetModel("Cayenne");
+		Porsche.SetYear(2017);
+		Porsche.SetMileage(3000);
+		Porsche.SetPrice(35000);
 
 		List<Car> Car = new List<Car>() { Ford, Mazda, Porsche };
 		foreach(Car auto in Car)
 		{
-			Console.WriteLine(auto.Make);
+			Console.WriteLine(auto.GetMake());
 		}
 		Console.WriteLine("Enter maximum mileage");
 		string maxMilesString = Console.ReadLine();
@@ -135,9 +136,9 @@ public class Program
 		}	
 		foreach(Car vehicle in CarsMatching)
 		{
-			Console.WriteLine("The vehicle make is " + vehicle.Make);
-			Console.WriteLine("The vehicle mileage is " + vehicle.Mileage);
-			Console.WriteLine("The vehicle price is " + vehicle.Price);
+			Console.WriteLine("The vehicle make is " + vehicle.GetMake());
+			Console.WriteLine("The vehicle mileage is " + vehicle.GetMileage());
+			Console.WriteLine("The vehicle price is " + vehicle.GetPrice());
 		}
 	}
 }
