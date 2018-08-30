@@ -127,18 +127,25 @@ public class Program
 		int maxPrice = int.Parse(maxPriceString);
 
 		List<Car> CarsMatching = new List<Car>();
-		foreach(Car auto in Car)
+		if(CarsMatching.Count == 0 )
 		{
-			if (auto.WorthBuying(maxPrice, maxMiles))
+			Console.WriteLine("Sorry no matching cars");
+		}
+		else 
+		{
+			foreach(Car auto in Car)
 			{
-				CarsMatching.Add(auto);
-			} 	
-		}	
-		foreach(Car vehicle in CarsMatching)
-		{
-			Console.WriteLine("The vehicle make is " + vehicle.GetMake());
-			Console.WriteLine("The vehicle mileage is " + vehicle.GetMileage());
-			Console.WriteLine("The vehicle price is " + vehicle.GetPrice());
+				if (auto.WorthBuying(maxPrice, maxMiles))
+				{
+					CarsMatching.Add(auto);
+				}
+			}	
+			foreach(Car vehicle in CarsMatching)
+			{
+				Console.WriteLine("The vehicle make is " + vehicle.GetMake());
+				Console.WriteLine("The vehicle mileage is " + vehicle.GetMileage());
+				Console.WriteLine("The vehicle price is " + vehicle.GetPrice());
+			}
 		}
 	}
 }
