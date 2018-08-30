@@ -5,6 +5,7 @@ class HigherOrLower
 {
 		public static readonly Random random = new Random();
 		public static int number = random.Next(-500,500);
+		// public int userGuess = 0;
 
 	static void Main()
 	{
@@ -18,21 +19,27 @@ class HigherOrLower
 		}
 		else
 		{
-			if(userGuess == number)
-			{
-				Console.WriteLine("Amazing you guessed it. The number I was thinking of was " + number);
-			}
-			else if( userGuess > number)
-			{
-				Console.WriteLine("You are too high guess again.");
-				Main();
-			}
-			else
-			{
-				Console.WriteLine("You are too low guess again");
-				Main();
-			}
-
+			Check(userGuess);
 		}
 	}
+
+	static void Check(int userGuess)
+	{
+		if(userGuess == number)
+		{
+			Console.WriteLine("Amazing you guessed it. The number I was thinking of was " + number);
+		}
+		else if( userGuess > number)
+		{
+			Console.WriteLine("You are too high guess again.");
+			Main();
+		}
+		else
+		{
+			Console.WriteLine("You are too low guess again");
+			Main();
+		}
+	}	
 }
+
+
