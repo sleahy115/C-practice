@@ -49,12 +49,16 @@ class HigherOrLower
 		else if( userGuess > number)
 		{
 			Console.WriteLine("You are too high guess again.");
-			Check(userGuess);
+			string guessAgainString = Console.ReadLine();
+			int guessAgain = int.Parse(guessAgainString);
+			Check(guessAgain);
 		}
 		else
 		{
 			Console.WriteLine("You are too low guess again");
-			Check(userGuess);
+			string guessAgainString = Console.ReadLine();
+			int guessAgain = int.Parse(guessAgainString);
+			Check(guessAgain);
 		}
 	}	
 }
