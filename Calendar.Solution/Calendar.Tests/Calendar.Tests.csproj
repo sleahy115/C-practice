@@ -1,14 +1,15 @@
-<project sdk = "Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>netcoreapp1.1</TargetFramework>
-		<ItemGroup>
-			<PackageRefrence Include = "Microsoft.NET.Sdk" Version = "15.0.0" />
-			<PackageRefrence Include = "MSTest.TestAdapator" Version = "1.2" />
-			<PackageRefrence Include = "MSTest.TestFramework" Version = "1.2" />
-		</ItemGroup>
-		
-		<ItemGroup>
-			<ProjectRefrence Include = "..\Calendar\Calendar.csproj" />
-		</ItemGroup>
-	</PropertyGroup>
-</project>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Calendar\Calendar.csproj" />
+  </ItemGroup>
+</Project>
