@@ -12,6 +12,13 @@ namespace Leetspeak.Test
 			Leetspeak testPhrase = new Leetspeak();
 			Assert.AreEqual("false", testPhrase.Translate("false"));
 		}
+
+		[TestMethod]
+		public void Translate_SplitPhraseIntoArray()
+		{
+			Leetspeak testSplit = new Leetspeak();
+			Assert.AreEqual("hello", testSplit.Translate("hello"));
+		}
 			
 	}
 }
