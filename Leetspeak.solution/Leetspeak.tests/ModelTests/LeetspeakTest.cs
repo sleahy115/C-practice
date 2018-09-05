@@ -47,11 +47,17 @@ namespace Leetspeak.Test
 		// 	Assert.AreEqual("H3ll0 1n th3r3", testI.Translate("Hello In there"));
 		// }
 		
+		// [TestMethod]
+		// public void Translate_replaceT_7()
+		// {
+		// 	Leetspeak testT = new Leetspeak();
+		// 	Assert.AreEqual("h3ll0 in 7h3r3", testT.Translate("Hello in there"));
+		// }
 		[TestMethod]
-		public void Translate_replaceT_7()
+		public void Translate_replaceS_z()
 		{
-			Leetspeak testT = new Leetspeak();
-			Assert.AreEqual("h3ll0 in 7h3r3", testT.Translate("Hello in there"));
+			Leetspeak testS = new Leetspeak();
+			Assert.AreEqual("h3ll0 in 7h3r3 m3lizza", testS.Translate("Hello in there Melissa"));
 		}
 	}
 		

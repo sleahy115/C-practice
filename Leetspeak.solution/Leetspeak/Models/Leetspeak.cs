@@ -34,6 +34,10 @@ namespace Leetspeak
 				{
 					array[i] = '7';
 				}
+				if(array[i] == 's')
+				{
+					array[i] = 'z';
+				}
 			}
 			string stringReturn = string.Join("", array);
 			return stringReturn;
