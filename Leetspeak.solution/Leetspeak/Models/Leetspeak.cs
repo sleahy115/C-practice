@@ -54,9 +54,13 @@ namespace Leetspeak
 
 			for(int i = 0; i < englishArray.Length; i++)
 			{
-				if (englishArray[i] == '3')
+				if(englishArray[i] == '3')
 				{
 					englishArray[i] = 'e';
+				}
+				if(englishArray[i] == '0')
+				{
+					englishArray[i] = 'o';
 				}
 			}
 			string englishReturn = string.Join("", englishArray);
