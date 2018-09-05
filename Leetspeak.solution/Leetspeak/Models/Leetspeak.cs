@@ -6,10 +6,16 @@ namespace Leetspeak
 	{
 		public string Translate(string phrase)
 		{	
-			if(phrase.Contains("I"))
+			// public bool begins = false;
+
+			if(phrase.Contains("I") || phrase.Contains("S"))
 			{
 				phrase = phrase;
 			}
+			// else if(phrase.StartsWith("S") == true)
+			// {
+			// 	begins = true;
+			// }
 			else
 			{
 				phrase = phrase.ToLower();
@@ -33,6 +39,10 @@ namespace Leetspeak
 				if(array[i] == 't')
 				{
 					array[i] = '7';
+				}
+				if(array[i] == 'S' && phrase.StartsWith("S") == true)
+				{
+					array[i] = 'S';
 				}
 				if(array[i] == 's')
 				{
