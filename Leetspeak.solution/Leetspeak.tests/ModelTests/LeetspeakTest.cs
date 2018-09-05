@@ -65,6 +65,12 @@ namespace Leetspeak.Test
 			Leetspeak testS = new Leetspeak();
 			Assert.AreEqual("H3ll0 in 7h3r3 Sally", testS.Translate("Hello in there Sally"));
 		}
+		[TestMethod]
+		public void English_replace3_e()
+		{
+			Leetspeak test3 = new Leetspeak();
+			Assert.AreEqual("Hello", test3.English("Hello"));
+		}
 	}
 		
 }

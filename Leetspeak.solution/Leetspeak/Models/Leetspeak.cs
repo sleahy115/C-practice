@@ -6,16 +6,11 @@ namespace Leetspeak
 	{
 		public string Translate(string phrase)
 		{	
-			// public bool begins = false;
 
 			if(phrase.Contains("I") || phrase.Contains("S"))
 			{
 				phrase = phrase;
 			}
-			// else if(phrase.StartsWith("S") == true)
-			// {
-			// 	begins = true;
-			// }
 			else
 			{
 				phrase = phrase.ToLower();
@@ -51,6 +46,21 @@ namespace Leetspeak
 			}
 			string stringReturn = string.Join("", array);
 			return stringReturn;
+		}
+
+		public string English(string englishPhrase)
+		{
+			char[] englishArray = englishPhrase.ToCharArray();
+
+			for(int i = 0; i < englishArray.Length; i++)
+			{
+				if (englishArray[i] == '3')
+				{
+					englishArray[i] = 'e';
+				}
+			}
+			string englishReturn = string.Join("", englishArray);
+			return englishReturn;
 		}
 	}
 }
