@@ -6,6 +6,7 @@ namespace Leetspeak
 	{
 		public string Translate(string phrase)
 		{
+			phrase = phrase.ToLower();
 			char[] array = phrase.ToCharArray();
 
 			for(int i = 0; i < array.Length; i++)

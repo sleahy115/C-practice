@@ -20,10 +20,17 @@ namespace Leetspeak.Test
 		// 	Assert.AreEqual("hello", testSplit.Translate("hello"));
 		// }
 		[TestMethod]
-		public void Translate_replaceE_true()
+		public void Translate_replaceE_3()
 		{
 			Leetspeak testE = new Leetspeak();
 			Assert.AreEqual("h3llo", testE.Translate("hello"));
+		}
+
+		[TestMethod]
+		public void Translate_replaceE_capitol_3()
+		{
+			Leetspeak testECapitol = new Leetspeak();
+			Assert.AreEqual("h3llo", testECapitol.Translate("HELLO"));
 		}
 			
 	}
