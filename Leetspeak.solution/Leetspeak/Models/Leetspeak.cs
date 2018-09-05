@@ -30,6 +30,10 @@ namespace Leetspeak
 				{
 					array[i] = '1';
 				}
+				if(array[i] == 't')
+				{
+					array[i] = '7';
+				}
 			}
 			string stringReturn = string.Join("", array);
 			return stringReturn;

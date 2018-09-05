@@ -40,13 +40,19 @@ namespace Leetspeak.Test
 		// 	Assert.AreEqual("h3ll0", testO.Translate("HELLO"));
 		// }
 
+		// [TestMethod]
+		// public void Translate_replaceI_1()
+		// {
+		// 	Leetspeak testI = new Leetspeak();
+		// 	Assert.AreEqual("H3ll0 1n th3r3", testI.Translate("Hello In there"));
+		// }
+		
 		[TestMethod]
-		public void Translate_replaceI_1()
+		public void Translate_replaceT_7()
 		{
-			Leetspeak testI = new Leetspeak();
-			Assert.AreEqual("H3ll0 1n th3r3", testI.Translate("Hello In there"));
+			Leetspeak testT = new Leetspeak();
+			Assert.AreEqual("h3ll0 in 7h3r3", testT.Translate("Hello in there"));
 		}
-			
 	}
 		
 }
