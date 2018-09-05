@@ -62,6 +62,10 @@ namespace Leetspeak
 				{
 					englishArray[i] = 'o';
 				}
+				if(englishArray[i] == '1')
+				{
+					englishArray[i] = 'I';
+				}
 			}
 			string englishReturn = string.Join("", englishArray);
 			return englishReturn;
