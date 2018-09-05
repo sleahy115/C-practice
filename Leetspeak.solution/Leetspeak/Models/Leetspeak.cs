@@ -15,6 +15,10 @@ namespace Leetspeak
 				{
 					array[i] = '3';
 				}
+				if(array[i] == 'o')
+				{
+					array[i] = '0';
+				}
 			}
 			string stringReturn = string.Join("", array);
 			return stringReturn;

@@ -19,19 +19,27 @@ namespace Leetspeak.Test
 		// 	Leetspeak testSplit = new Leetspeak();
 		// 	Assert.AreEqual("hello", testSplit.Translate("hello"));
 		// }
-		[TestMethod]
-		public void Translate_replaceE_3()
-		{
-			Leetspeak testE = new Leetspeak();
-			Assert.AreEqual("h3llo", testE.Translate("hello"));
-		}
+		// [TestMethod]
+		// public void Translate_replaceE_3()
+		// {
+		// 	Leetspeak testE = new Leetspeak();
+		// 	Assert.AreEqual("h3llo", testE.Translate("hello"));
+		// }
+
+		// [TestMethod]
+		// public void Translate_replaceE_capitol_3()
+		// {
+		// 	Leetspeak testECapitol = new Leetspeak();
+		// 	Assert.AreEqual("h3llo", testECapitol.Translate("HELLO"));
+		// }
 
 		[TestMethod]
-		public void Translate_replaceE_capitol_3()
+		public void Translate_replaceO_0()
 		{
-			Leetspeak testECapitol = new Leetspeak();
-			Assert.AreEqual("h3llo", testECapitol.Translate("HELLO"));
+			Leetspeak testO = new Leetspeak();
+			Assert.AreEqual("h3ll0", testO.Translate("HELLO"));
 		}
 			
 	}
+		
 }
