@@ -33,11 +33,18 @@ namespace Leetspeak.Test
 		// 	Assert.AreEqual("h3llo", testECapitol.Translate("HELLO"));
 		// }
 
+		// [TestMethod]
+		// public void Translate_replaceO_0()
+		// {
+		// 	Leetspeak testO = new Leetspeak();
+		// 	Assert.AreEqual("h3ll0", testO.Translate("HELLO"));
+		// }
+
 		[TestMethod]
-		public void Translate_replaceO_0()
+		public void Translate_replaceI_1()
 		{
-			Leetspeak testO = new Leetspeak();
-			Assert.AreEqual("h3ll0", testO.Translate("HELLO"));
+			Leetspeak testI = new Leetspeak();
+			Assert.AreEqual("H3ll0 1n th3r3", testI.Translate("Hello In there"));
 		}
 			
 	}
