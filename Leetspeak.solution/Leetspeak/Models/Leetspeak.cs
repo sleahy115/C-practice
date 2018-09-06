@@ -79,10 +79,21 @@ public class Leetspeak
 			}
 			string stringReturn = string.Join("", array);
 			Console.WriteLine("Your phrase is Leetspeak is " + stringReturn);
+			Console.WriteLine("Would you like to translate your phase back to English? y/n");
+			string englishTranslation = Console.ReadLine();
+			
+			if(englishTranslation == "y")
+			{
+				English(stringReturn);
+			}
+			else
+			{
+				Console.WriteLine("Thanks for using the translator");
+			}
 			return stringReturn;
 		}
 
-		public string English(string englishPhrase)
+		static string English(string englishPhrase)
 		{
 			char[] englishArray = englishPhrase.ToCharArray();
 
@@ -110,6 +121,7 @@ public class Leetspeak
 				}
 			}
 			string englishReturn = string.Join("", englishArray);
+			Console.WriteLine("Your phrase in English is " + englishReturn);
 			return englishReturn;
 		}
 	}
