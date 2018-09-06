@@ -1,40 +1,45 @@
 using System;
 
-	private class Leetspeak
+public class Leetspeak
+{
+	private string _phrase;
+	private string _stringReturn;
+
+	public void SetPhrase(string newPhrase)
 	{
-		private string _phrase;
-		private string _stringReturn;
+		_phrase = newPhrase;
+	}
 
-		public void SetPhrase(string newPhrase)
-		{
-			_phrase = newPhrase;
-		}
+	public string GetPhrase()
+	{
+		return _phrase;
+	}
 
-		public string GetPhrase()
-		{
-			return _phrase;
-		}
+	public void SetStringReturn(string newStringReturn)
+	{
+		_stringReturn = newStringReturn;
+	}
 
-		public void SetstringReturn(string newStringReturn)
-		{
-			_stringReturn = newStringReturn;
-		}
-
-		public string GetStringReturn()
-		{
-			return _stringReturn;
-		}
-
+	public string GetStringReturn()
+	{
+		return _stringReturn;
+	}
+}
+    public class Program
+    {
 		static void Main()
 		{
 			Console.WriteLine("Enter a phrase to have it translated to Leetspeak");
-			phrase = Console.ReadLine();
-			Translate(phrase);
+			
+			Leetspeak LeetPhrase = new Leetspeak();
+			LeetPhrase.SetPhrase(Console.ReadLine());
+			LeetPhrase.SetStringReturn("");
+
+			Translate(LeetPhrase.GetPhrase());
 		}
 
-		public string Translate(string phrase)
+		static string Translate(string phrase)
 		{	
-
 			if(phrase.Contains("I") || phrase.Contains("S"))
 			{
 				phrase = phrase;
@@ -73,6 +78,7 @@ using System;
 				}
 			}
 			string stringReturn = string.Join("", array);
+			Console.WriteLine("Your phrase is Leetspeak is " + stringReturn);
 			return stringReturn;
 		}
 
