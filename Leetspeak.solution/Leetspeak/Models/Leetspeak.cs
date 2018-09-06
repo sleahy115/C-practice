@@ -1,9 +1,37 @@
 using System;
 
-namespace Leetspeak
-{
-	public class Leetspeak
+	private class Leetspeak
 	{
+		private string _phrase;
+		private string _stringReturn;
+
+		public void SetPhrase(string newPhrase)
+		{
+			_phrase = newPhrase;
+		}
+
+		public string GetPhrase()
+		{
+			return _phrase;
+		}
+
+		public void SetstringReturn(string newStringReturn)
+		{
+			_stringReturn = newStringReturn;
+		}
+
+		public string GetStringReturn()
+		{
+			return _stringReturn;
+		}
+
+		static void Main()
+		{
+			Console.WriteLine("Enter a phrase to have it translated to Leetspeak");
+			phrase = Console.ReadLine();
+			Translate(phrase);
+		}
+
 		public string Translate(string phrase)
 		{	
 
@@ -79,4 +107,3 @@ namespace Leetspeak
 			return englishReturn;
 		}
 	}
-}
