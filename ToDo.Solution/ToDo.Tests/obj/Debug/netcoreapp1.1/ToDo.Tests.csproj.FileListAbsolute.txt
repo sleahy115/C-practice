@@ -1,0 +1,17 @@
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDo.Tests.csprojAssemblyReference.cache
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDo.Tests.csproj.CoreCompileInputs.cache
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDo.Tests.AssemblyInfoInputs.cache
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDo.Tests.AssemblyInfo.cs
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\ToDo.Tests.deps.json
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\ToDo.Tests.runtimeconfig.json
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\ToDo.Tests.runtimeconfig.dev.json
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\ToDo.Tests.dll
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\ToDo.Tests.pdb
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\ToDo.dll
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\bin\Debug\netcoreapp1.1\ToDo.pdb
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDo.Tests.csproj.CopyComplete
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDo.Tests.dll
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDo.Tests.pdb

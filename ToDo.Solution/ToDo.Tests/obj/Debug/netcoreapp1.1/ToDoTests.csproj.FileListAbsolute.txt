@@ -1,0 +1,4 @@
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDoTests.csprojAssemblyReference.cache
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDoTests.csproj.CoreCompileInputs.cache
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDoTests.AssemblyInfoInputs.cache
+C:\Users\sarah\Desktop\c#\ToDo.Solution\ToDo.Tests\obj\Debug\netcoreapp1.1\ToDoTests.AssemblyInfo.cs

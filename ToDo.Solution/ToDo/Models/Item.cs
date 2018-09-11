@@ -1,6 +1,6 @@
 namespace ToDo.Models
 {
-	public class Items
+	public class Item
 	{
 		private string _description;
 
