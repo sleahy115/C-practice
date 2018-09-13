@@ -7,6 +7,18 @@ namespace ToDo.Models
 		private string _description;
 		private static List<Item> _instances = new List<Item> {};
 
+		//static methods
+		public static void ClearAll()
+		{
+			_instances.Clear();
+		}
+
+		public static List<Item> GetAll()
+		{
+			return _instances;
+		} 
+
+		//instance methods
 		public Item (string description)
 		{
 			_description = description;
@@ -21,11 +33,6 @@ namespace ToDo.Models
 		{
 			_description = newDescription;
 		}
-
-		public static List<Item> GetAll()
-		{
-			return _instances;
-		} 
 
 		public void Save()
 		{

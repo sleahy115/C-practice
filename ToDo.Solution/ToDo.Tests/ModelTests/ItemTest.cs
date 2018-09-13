@@ -1,12 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System;
 using ToDo.Models;
 
 namespace ToDo.Tests
 {
 	[TestClass]
-	public class ItemTest
+	public class ItemTest : IDisposable
 	{
+		public void Dispose()
+		{
+			Item.ClearAll();
+		}
+
 		[TestMethod]
 		public void GetDescription_ReturnsDescription_String()
 		{			
@@ -36,6 +42,26 @@ namespace ToDo.Tests
 
 			//Assert	
 			Assert.AreEqual(newItem, savedItem);
+		}
+
+		[TestMethod]
+		public void getAll_ReturnListOfItems_ItemList()
+		{
+			//Arrange
+			string descriptionOne = "walk the dog";
+			string descriptionTwo =" wash the dishes";
+			Item newItemOne = new Item(descriptionOne);
+			Item newItemTwo = new Item(descriptionTwo);
+			newItemOne.Save();
+			newItemTwo.Save();
+			List<Item> itemList = new List<Item> {newItemOne, newItemTwo};
+
+			//Act
+			List<Item> result = Item.GetAll();
+
+
+			// Assert
+			CollectionAssert.AreEqual(itemList, result);
 		}
 	}
 
