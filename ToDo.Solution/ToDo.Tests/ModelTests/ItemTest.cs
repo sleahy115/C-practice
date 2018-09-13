@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using ToDo.Models;
 
 namespace ToDo.Tests
@@ -19,5 +20,23 @@ namespace ToDo.Tests
 		//Assert
 		Assert.AreEqual(description, result);
 		}
+
+		[TestMethod]
+		public void Save_ItemSavedToInstances_Item()
+		{
+			//Arrange
+			string description = "walk the dog";
+			Item newItem = new Item(description);
+			newItem.Save();
+
+			//Act
+			List<Item> instances = Item.GetAll();
+			Item savedItem  = instances[0];
+
+
+			//Assert	
+			Assert.AreEqual(newItem, savedItem);
+		}
 	}
+
 }

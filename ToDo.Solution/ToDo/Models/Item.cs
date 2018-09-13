@@ -5,7 +5,7 @@ namespace ToDo.Models
 	public class Item
 	{
 		private string _description;
-		private List<Item> _instances = new List<Item> {};
+		private static List<Item> _instances = new List<Item> {};
 
 		public Item (string description)
 		{
@@ -17,7 +17,7 @@ namespace ToDo.Models
 			return _description;
 		}
 
-		public void SetDescription(newDescription)
+		public void SetDescription(string newDescription)
 		{
 			_description = newDescription;
 		}
@@ -26,9 +26,10 @@ namespace ToDo.Models
 		{
 			return _instances;
 		} 
+
 		public void Save()
 		{
-			//_instances.Add(this);
+			_instances.Add(this);
 		}
 	}
 }
