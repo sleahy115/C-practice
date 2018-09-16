@@ -10,7 +10,7 @@ namespace Shapes.TestTools
 		public void Cube_GetVolume_VoulmeOfCube()
 		{
 			//Arrange
-			Rectangle newRectangle = new Rectangle(4,4,);
+			Rectangle newRectangle = new Rectangle(4,4);
 			Cube newCube = new Cube(newRectangle);
 
 			//Act

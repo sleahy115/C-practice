@@ -1,8 +1,8 @@
-namespace shapes.models
+namespace shapes.Models
 {
 	public class Cube
 	{
-		private Rectangle_face;
+		private Rectangle _face;
 		public Cube (Rectangle side)
 		{
 			_face = side;
@@ -10,7 +10,8 @@ namespace shapes.models
 
 		public int GetVolume()
 		{
-			return 0;
+			int length = _face.GetLength();
+			return length * length * length;
 		}
 	}
 }
