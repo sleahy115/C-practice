@@ -1,0 +1,17 @@
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\obj\Debug\netcoreapp1.1\Shapes.Tests.csprojAssemblyReference.cache
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\obj\Debug\netcoreapp1.1\Shapes.Tests.csproj.CoreCompileInputs.cache
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\obj\Debug\netcoreapp1.1\Shapes.Tests.AssemblyInfoInputs.cache
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\obj\Debug\netcoreapp1.1\Shapes.Tests.AssemblyInfo.cs
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\Shapes.Tests.deps.json
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\Shapes.Tests.runtimeconfig.json
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\Shapes.Tests.runtimeconfig.dev.json
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\Shapes.Tests.dll
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\Shapes.Tests.pdb
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\rectangle.dll
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\bin\Debug\netcoreapp1.1\rectangle.pdb
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\obj\Debug\netcoreapp1.1\Shapes.Tests.csproj.CopyComplete
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\obj\Debug\netcoreapp1.1\Shapes.Tests.dll
+C:\Users\sarah\Desktop\c#\shapes.solution\shapes.tests\obj\Debug\netcoreapp1.1\Shapes.Tests.pdb

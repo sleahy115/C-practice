@@ -1,5 +1,5 @@
-using Microsoft.VIsualStudio.TestTools.UnitTesting;
-using Shapes.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using shapes.Models;
 
 namespace Shapes.Tests
 {
@@ -26,10 +26,10 @@ namespace Shapes.Tests
 				Rectangle newRectangle = new Rectangle(4,5);
 
 				//Act
-				bool result = newRectangle.RectangleIsSquare();
+				bool result = newRectangle.IsSquare();
 
 				//Assert
-				Assert.AreEqual(reault, false);
+				Assert.AreEqual(result, false);
 			}
 	}
 }

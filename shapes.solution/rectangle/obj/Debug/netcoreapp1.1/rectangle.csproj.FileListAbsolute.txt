@@ -1,0 +1,9 @@
+C:\Users\sarah\Desktop\c#\shapes.solution\rectangle\obj\Debug\netcoreapp1.1\rectangle.csprojAssemblyReference.cache
+C:\Users\sarah\Desktop\c#\shapes.solution\rectangle\obj\Debug\netcoreapp1.1\rectangle.csproj.CoreCompileInputs.cache
+C:\Users\sarah\Desktop\c#\shapes.solution\rectangle\obj\Debug\netcoreapp1.1\rectangle.AssemblyInfoInputs.cache
+C:\Users\sarah\Desktop\c#\shapes.solution\rectangle\obj\Debug\netcoreapp1.1\rectangle.AssemblyInfo.cs
+C:\Users\sarah\Desktop\c#\shapes.solution\rectangle\bin\Debug\netcoreapp1.1\rectangle.deps.json
+C:\Users\sarah\Desktop\c#\shapes.solution\rectangle\bin\Debug\netcoreapp1.1\rectangle.dll
+C:\Users\sarah\Desktop\c#\shapes.solution\rectangle\bin\Debug\netcoreapp1.1\rectangle.pdb
+C:\Users\sarah\Desktop\c#\shapes.solution\rectangle\obj\Debug\netcoreapp1.1\rectangle.dll
+C:\Users\sarah\Desktop\c#\shapes.solution\rectangle\obj\Debug\netcoreapp1.1\rectangle.pdb

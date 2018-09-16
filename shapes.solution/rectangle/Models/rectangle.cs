@@ -13,20 +13,20 @@ namespace shapes.Models
 
 		public int GetLength()
 		{
-			return Length;
+			return _length;
 		}
 
-		public void SetLength(newLength)
+		public void SetLength(int newLength)
 		{
 			newLength = _length;
 		}
 
 		public int GetWidth()
 		{
-			return width;
+			return _width;
 		}
 
-		public void SetWidth(newWidth)
+		public void SetWidth(int newWidth)
 		{
 			newWidth = _width;
 		}	
