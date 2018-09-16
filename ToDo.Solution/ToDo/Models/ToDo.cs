@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 	
 	public class Item
 	{
@@ -41,18 +42,23 @@ using System.Collections.Generic;
 	public class Program
 	{
 		static void Main()
-		{
-			Console.WriteLine("Would you like to see your to do list? y/n");
-			string showList = Console.ReadLine();
-
-			if(showList == "y")
+		{	
+			Console.WriteLine("Would you like to create a new list or see an existing one?");
+			string newOrExisting = Console.ReadLine();
+			if(newOrExisting == "new")
 			{
-				Console.WriteLine("Here is your list ");	
+				CreateList();
 			}
 			else
 			{
-				Console.WriteLine("Thanks for checking the list");
+				ShowList();
 			}
+
+		}
+		static void CreateList()
+		{
+			List<Item> newList = new List<Item> {};
+			AddItem();
 		}
 
 		static void AddItem()
@@ -64,11 +70,25 @@ using System.Collections.Generic;
 			{	
 				Console.WriteLine("Please enter the description");
 				string newItemDesc = Console.ReadLine();
+				
 				Item newItem = new Item(newItemDesc);
 				newItem.SetDescription(newItemDesc);
 				newItem.Save();
 			}
+		}
+		static string ShowList()
+		{
+			List<Item> toDoList = Item.GetAll();
 
+			if(toDoList.Count == 0)
+			{
+				Console.WriteLine("Nothing found in your to do list");
+			}
+			else
+			{
+				string toDoListOutput = string.Join(",",toDoList);
+				Console.WriteLine(toDoListOutput);
+			}
 		}
 
 	}
