@@ -16,7 +16,8 @@ namespace shapes.Models
 
 		public int GetSurfaceArea()
 		{
-			return 0;
+			int length = _face.GetLength();
+			return (length * length) * 6;
 		}
 	}
 }
