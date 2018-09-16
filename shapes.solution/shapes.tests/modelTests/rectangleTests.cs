@@ -16,7 +16,7 @@ namespace Shapes.Tests
 			int result = newRectangle.GetArea();
 
 			//Assert
-			Assert.AreEqual(result, 16);
+			Assert.AreEqual(result, 9);
 		}
 
 			[TestMethod]
