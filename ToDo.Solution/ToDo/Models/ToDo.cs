@@ -47,15 +47,28 @@ using System.Collections.Generic;
 
 			if(showList == "y")
 			{
-				// Console.WriteLine(_description);
-				// if(_instances.count == 0)
-				// {
-				// 	Console.WriteLine("Looks like your list is empty, way to Go. WOuld you like to add to your list?");
-				// }
+				Console.WriteLine("Here is your list ");	
 			}
 			else
 			{
 				Console.WriteLine("Thanks for checking the list");
 			}
 		}
+
+		static void AddItem()
+		{
+			Console.WriteLine("Would you like to add an item to your to do list? y/n");
+			string addItemResponse = Console.ReadLine();
+
+			if(addItemResponse == "y")
+			{	
+				Console.WriteLine("Please enter the description");
+				string newItemDesc = Console.ReadLine();
+				Item newItem = new Item(newItemDesc);
+				newItem.SetDescription(newItemDesc);
+				newItem.Save();
+			}
+
+		}
+
 	}

@@ -39,5 +39,4 @@ namespace ToDo.Models
 			_instances.Add(this);
 		}
 	}
-
 }
