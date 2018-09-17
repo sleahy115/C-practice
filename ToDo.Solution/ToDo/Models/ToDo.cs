@@ -74,20 +74,34 @@ using System.Linq;
 				Item newItem = new Item(newItemDesc);
 				newItem.SetDescription(newItemDesc);
 				newItem.Save();
+				ShowList();
 			}
 		}
-		static string ShowList()
+		static void ShowList()
 		{
 			List<Item> toDoList = Item.GetAll();
 
-			if(toDoList.Count == 0)
+			if(toDoList.Count < 1)
 			{
-				Console.WriteLine("Nothing found in your to do list");
+				Console.WriteLine("Nothing found in your to do list. Would you like to add items? y/n");
+				string emptyListResponse = Console.ReadLine();
+				if(emptyListResponse == "y")
+				{
+					AddItem();
+				}
+				else
+				{
+					Console.WriteLine("OK thanks for using the to do list app");
+				}
 			}
 			else
 			{
-				string toDoListOutput = string.Join(",",toDoList);
-				Console.WriteLine(toDoListOutput);
+				foreach(var listItem in toDoList)
+				{
+					string output = listItem.GetDescription().ToString();
+					Console.WriteLine(output);
+				}
+				// string toDoListOutput = string.Join(" ", toDoList.GetDescription());
 			}
 		}
 
