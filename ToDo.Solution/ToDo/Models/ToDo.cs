@@ -74,7 +74,12 @@ using System.Linq;
 				Item newItem = new Item(newItemDesc);
 				newItem.SetDescription(newItemDesc);
 				newItem.Save();
+				AddItem();
+			}
+			else
+			{
 				ShowList();
+
 			}
 		}
 		static void ShowList()
@@ -101,7 +106,6 @@ using System.Linq;
 					string output = listItem.GetDescription().ToString();
 					Console.WriteLine(output);
 				}
-				// string toDoListOutput = string.Join(" ", toDoList.GetDescription());
 			}
 		}
 
