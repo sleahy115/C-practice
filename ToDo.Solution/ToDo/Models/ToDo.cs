@@ -101,7 +101,16 @@ using System.Linq;
 				}
 				else
 				{
-					AddItem();
+					Console.WriteLine("Would you like to clear the entire list?");
+					string runClearList = Console.ReadLine();
+					if(runClearList == "y")
+					{
+						CompletedList();
+					}
+					else 
+					{
+						AddItem();
+					}
 				}
 
 			}
@@ -120,13 +129,14 @@ using System.Linq;
 				int checkOffTaskNumberInt = int.Parse(checkOffTaskNumber);
 				List<Item> toDoList = Item.GetAll();
 				toDoList.RemoveAt(checkOffTaskNumberInt);
-				
+
 				taskNumber = 0;
 				foreach(var listItem in toDoList)
 				{
 					string outputTask = listItem.GetDescription().ToString();
 					listItem.SetTaskNumber(taskNumber++);
 					Console.WriteLine(listItem.GetTaskNumber() + "  " + outputTask);
+					AddItem();
 				}
 			}
 			else
@@ -162,11 +172,11 @@ using System.Linq;
 				}
 			}
 		}
-		static void CompletedItem()
+		static void CompletedList()
 		{
 			// List<Item> toDoList = Item.GetAll();
-
-			Console.WriteLine("Which task would you like to check off?");	
+			Item.ClearAll();
+			Console.WriteLine("Way to go you cleared the list! Thanks for using the to do list app");
 		}
 
 	}
