@@ -92,9 +92,38 @@ using System.Linq;
 			else
 			{
 				ShowList();
+				Console.WriteLine("Would you like to remove an item? y/n");
+				string runRemoveItem = Console.ReadLine();
+
+				if(runRemoveItem == "y")
+				{
+					RemoveItem();
+				}
+				else
+				{
+					AddItem();
+				}
 
 			}
 		}
+
+		static void RemoveItem()
+		{
+			Console.WriteLine("Would you like to check an item off the list? y/n");
+			string removeItemResponse = Console.ReadLine();
+
+			if( removeItemResponse == "y")
+			{
+				ShowList();
+				Console.WriteLine("Enter the number of the task you have completed.");
+				string checkOffTaskNumber = Console.ReadLine();
+				int checkOffTaskNumberInt = int.Parse(checkOffTaskNumber);
+				List<Item> toDoList = Item.GetAll();
+				toDoList.RemoveAt(checkOffTaskNumberInt);
+				ShowList();
+			}
+		}
+
 		static void ShowList()
 		{
 			List<Item> toDoList = Item.GetAll();
