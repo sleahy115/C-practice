@@ -120,6 +120,17 @@ using System.Linq;
 				int checkOffTaskNumberInt = int.Parse(checkOffTaskNumber);
 				List<Item> toDoList = Item.GetAll();
 				toDoList.RemoveAt(checkOffTaskNumberInt);
+				
+				taskNumber = 0;
+				foreach(var listItem in toDoList)
+				{
+					string outputTask = listItem.GetDescription().ToString();
+					listItem.SetTaskNumber(taskNumber++);
+					Console.WriteLine(listItem.GetTaskNumber() + "  " + outputTask);
+				}
+			}
+			else
+			{
 				ShowList();
 			}
 		}
