@@ -5,6 +5,7 @@ using System.Linq;
 	public class Item
 	{
 		private string _description;
+		private  int _taskNumber;
 		private static List<Item> _instances = new List<Item> {};
 
 		//static methods
@@ -34,6 +35,16 @@ using System.Linq;
 			_description = newDescription;
 		}
 
+		public void SetTaskNumber(int newTaskNumber)
+		{
+			_taskNumber = newTaskNumber;
+		}
+
+		public int GetTaskNumber()
+		{
+			return _taskNumber;
+		}
+
 		public void Save()
 		{
 			_instances.Add(this);
@@ -41,6 +52,7 @@ using System.Linq;
 	}
 	public class Program
 	{
+		static int taskNumber = 1;
 		static void Main()
 		{	
 			Console.WriteLine("Would you like to create a new list or see an existing one?");
@@ -57,7 +69,7 @@ using System.Linq;
 		}
 		static void CreateList()
 		{
-			List<Item> newList = new List<Item> {};
+			// List<Item> newList = new List<Item> {};
 			AddItem();
 		}
 
@@ -73,6 +85,7 @@ using System.Linq;
 				
 				Item newItem = new Item(newItemDesc);
 				newItem.SetDescription(newItemDesc);
+				newItem.SetTaskNumber(taskNumber++);
 				newItem.Save();
 				AddItem();
 			}
@@ -103,10 +116,17 @@ using System.Linq;
 			{
 				foreach(var listItem in toDoList)
 				{
-					string output = listItem.GetDescription().ToString();
-					Console.WriteLine(output);
+					string outputTask = listItem.GetDescription().ToString();
+					int outputNumber = listItem.GetTaskNumber();
+					Console.WriteLine(outputNumber + "  " + outputTask);
 				}
 			}
+		}
+		static void CompletedItem()
+		{
+			// List<Item> toDoList = Item.GetAll();
+
+			Console.WriteLine("Which task would you like to check off?");	
 		}
 
 	}
